@@ -7,6 +7,7 @@ $(document).ready(function(){
         
         $('table tbody tr').each(function(){
             var $row = $(this);
+            var idText = $row.find('td:nth-child(1)').text().toLowerCase();
             var nameText = $row.find('td:nth-child(2)').text().toLowerCase();
             var categoryText = $row.find('td:nth-child(3)').text().toLowerCase();
             var matchFound = (nameText.indexOf(value) > -1 || categoryText.indexOf(value) > -1);
